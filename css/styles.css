@@ -1,0 +1,107 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    font-size: 18px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body>h1 {
+    font-size: 0;
+    width: 1px;
+    height: 1px;
+    display: inline-block;
+    overflow: hidden;
+    position: absolute!important;
+    border: 0!important;
+    padding: 0!important;
+    margin: 0!important;
+    clip: rect(1px,1px,1px,1px);
+}
+
+.cards {
+    text-align: center;
+}
+
+.statCard {
+    display: inline-block;
+    position: relative;
+    width: 30%;
+    min-width: 300px;
+    height: 250px;
+    border-radius: 10px;
+    color: white;
+    margin: 10px;
+    text-align: left;
+    padding: 40px;
+    line-height: 2em;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.cardName {
+    font-weight: normal;
+    font-size: 1.3rem;
+}
+
+.statNumber {
+    font-weight: 600;
+    font-size: 2rem;
+    padding: 10px 0;
+}
+
+.statDynamic {
+    display: block;
+    position: absolute;
+    bottom: 40px;
+    left: 40px;
+    font-weight: 600;
+}
+
+.cardIcon {
+    position: absolute;
+    top: 45px;
+    right: 40px;
+}
+
+.statCard::before {
+    content: '';
+    position: absolute;
+    right: -90px;
+    top: -20px;
+    z-index: -1;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.statCard::after {
+    content: '';
+    position: absolute;
+    right: -20px;
+    bottom: -90px;
+    z-index: -1;
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.statCard:first-child {
+    background: rgb(203,161,101);
+    background: linear-gradient(90deg, rgba(203,161,101,1) 0%, rgba(231,118,118,1) 48%);
+}
+
+.statCard:nth-child(2n) {
+    background: rgb(107,206,222);
+    background: linear-gradient(90deg, rgba(107,206,222,1) 0%, rgba(26,64,103,1) 71%);
+}
+
+.statCard:last-child {
+    background: rgb(131,224,192);
+    background: linear-gradient(90deg, rgba(131,224,192,1) 0%, rgba(26,170,122,1) 71%);
+}
